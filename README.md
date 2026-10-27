@@ -12,7 +12,6 @@ The setup includes a dedicated VirtualBox NAT Network, Kali Linux network config
 
 ## 🎯 Objectives
 
-- Install 7-Zip to extract compressed virtual machine files.
 - Install and configure Oracle VirtualBox.
 - Import and run the Kali Linux virtual machine.
 - Create a private NAT Network for the cybersecurity lab.
@@ -35,6 +34,8 @@ The environment will support future learning activities, including:
 - Security monitoring and incident investigation.
 - Hands-on cybersecurity portfolio development.
 
+⚠️ Important: This laboratory must only be used for systems that you own or have explicit permission to test. Do not use the lab or its tools to attack unauthorized systems.
+
 ## 🏗️ Lab Architecture
 
 The lab uses a Windows 11 host computer running Oracle VirtualBox, with Kali Linux operating as a guest virtual machine.
@@ -45,13 +46,7 @@ A dedicated VirtualBox NAT Network provides a separate virtual networking enviro
 
 ![Cybersecurity Lab Architecture](screenshots/08-lab-architecture.png)
 
-**Architecture components:**
-
-- **Host operating system:** Windows 11
-- **Virtualization platform:** Oracle VirtualBox
-- **Guest operating system:** Kali Linux
-- **Virtual network:** Dedicated VirtualBox NAT Network
-- **Recovery mechanism:** Clean virtual machine snapshot
+Additional target machines can be added to the same virtual network in future projects.
 
 ## ⚙️ Lab Configuration
 
@@ -75,26 +70,26 @@ A dedicated VirtualBox NAT Network provides a separate virtual networking enviro
 
 ### Step 1: Install 7-Zip
 
-Install 7-Zip on the Windows 11 host computer to extract compressed files, including `.7z` archives, when preparing virtual machine installation files.
+Installed 7-Zip on the Windows 11 host computer to extract compressed files, including `.7z` archives, when preparing virtual machine installation files.
 
 Download: [Official 7-Zip website](https://www.7-zip.org/)
 
 ### Step 2: Install Oracle VirtualBox
 
-Install Oracle VirtualBox on the Windows 11 host computer. VirtualBox allows Kali Linux to run inside a virtual machine without replacing the host operating system.
+Installed Oracle VirtualBox on the Windows 11 host computer. VirtualBox allows Kali Linux to run inside a virtual machine without replacing the host operating system.
 
 Download: [Official VirtualBox website](https://www.virtualbox.org/)
 
 ### Step 3: Create a Private NAT Network
 
-Open Oracle VirtualBox and create a dedicated NAT Network for the cybersecurity lab.
+Opened Oracle VirtualBox and created a dedicated NAT Network for the cybersecurity lab.
 
-1. Open VirtualBox's network configuration settings.
-2. Create a new NAT Network.
-3. Assign a suitable network name.
-4. Review the network address and DHCP settings.
-5. Attach the Kali Linux virtual machine to the intended NAT Network.
-6. Verify that the selected network configuration matches the lab requirements.
+1. Opened VirtualBox's network configuration settings.
+2. Createed a new NAT Network.
+3. Assigned a suitable network name.
+4. Reviewed the network address and DHCP settings.
+5. Attached the Kali Linux virtual machine to the intended NAT Network.
+6. Verified that the selected network configuration matches the lab requirements.
 
 ![VirtualBox NAT Network Settings](screenshots/07-virtualbox-network-settings.png)
 
@@ -125,26 +120,25 @@ RAM: 4096 MB
 
 ### Step 5: Configure the Kali Linux Network
 
-Inspect the Kali Linux network settings through the graphical network settings interface.
+Inspected the Kali Linux network settings through the graphical network settings interface.
 
-1. Open the Kali Linux network settings.
-2. Review the available network interface and connection status.
-3. Confirm that the virtual machine is connected to the intended VirtualBox network.
-4. Review the network configuration and confirm that the connection is active.
+1. Opened the Kali Linux network settings.
+2. Reviewed the available network interface and connection status.
+3. Confirmed that the virtual machine is connected to the intended VirtualBox network.
+4. Reviewed the network configuration and confirm that the connection is active.
 
 ![Kali Linux Network Configuration](screenshots/04-network-configuration.png)
 
 ### Step 6: Configure a Shared Folder
 
-A VirtualBox shared folder can be used to transfer screenshots and documentation between the Windows host and Kali Linux.
+A VirtualBox shared folder was used to transfer screenshots and documentation between the Windows host and Kali Linux.
 
-1. Create a folder on the Windows host for lab file transfers.
-2. Open the Kali Linux virtual machine's settings in VirtualBox.
-3. Add the shared folder and select the appropriate host folder.
-4. Enable automatic mounting if required.
-5. Confirm that Kali Linux can access the shared folder.
+1. Created a folder on the Windows host for lab file transfers.
+2. Opened the Kali Linux virtual machine's settings in VirtualBox.
+3. Added the shared folder and select the appropriate host folder.
+4. Enabled automatic mounting if required.
+5. Confirmed that Kali Linux can access the shared folder.
 
-Use the shared folder only for intended lab files. Avoid transferring sensitive files or untrusted executables unnecessarily.
 
 ### Step 7: Take a Clean VM Snapshot
 
