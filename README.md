@@ -222,7 +222,8 @@ This lab is intended for educational purposes and authorized security testing on
 **Izzath Inayathullah**
 Aspiring Cybersecurity Professional B084
 
-GitHub: [IzzathInayathullah](https://github.com/IzzathInayathullah)   LinkedIn: [IzzathInayathullah](https://www.linkedin.com/in/izzathinayathullah/)
+GitHub: [IzzathInayathullah](https://github.com/IzzathInayathullah)  
+LinkedIn: [IzzathInayathullah](https://www.linkedin.com/in/izzathinayathullah/)
 
 ## 📌 Project Information
 
