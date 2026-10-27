@@ -102,13 +102,24 @@ Open Oracle VirtualBox and create a dedicated NAT Network for the cybersecurity 
 
 ### Step 4: Import and Start Kali Linux
 
-Import the Kali Linux virtual machine into Oracle VirtualBox using the appropriate virtual machine image or appliance.
+The Kali Linux virtual machine was downloaded from the [official Kali Linux website](https://www.kali.org/get-kali/) and imported into Oracle VirtualBox.
 
-1. Open Oracle VirtualBox.
-2. Import or register the Kali Linux virtual machine.
-3. Review the virtual machine configuration.
-4. Start Kali Linux.
-5. Confirm that the Kali Linux desktop loads successfully.
+**Virtual Machine Network Configuration**
+
+The VM network adapter was configured as follows:
+
+```text
+Adapter 1
+Attached to:  NAT Network
+Network:      NatNetwork
+Adapter Type: Intel PRO/1000 MT Desktop
+```
+
+**Virtual Machine Resource Allocation**
+
+```text
+RAM: 4096 MB
+```
 
 ![Kali Linux Desktop](screenshots/02-kali-desktop.png)
 
