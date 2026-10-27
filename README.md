@@ -144,6 +144,7 @@ A VirtualBox shared folder was used to transfer screenshots and documentation be
 
 A clean snapshot of the Kali Linux virtual machine provides a recovery point before performing cybersecurity lab exercises. It can help restore the VM to its saved state if a future experiment causes unexpected configuration changes.
 
+
 The clean snapshot was created using Oracle VirtualBox's snapshot functionality.
 
 ![Kali Linux Virtual Machine and Clean Snapshot](screenshots/01-virtualbox-kali-vm.png)
@@ -152,39 +153,29 @@ The clean snapshot was created using Oracle VirtualBox's snapshot functionality.
 
 ## 🔎 Lab Verification
 
-The following checks were performed to confirm that the lab was operational.
+The Kali Linux lab environment was verified by checking the network interface configuration, testing connectivity to the NAT Network gateway and an external IP address, and confirming that the clean VM snapshot can restore the baseline configuration.
 
-### 1. System Information
+| **Test**                   | **Command**                               | **Expected Result**                             |
+| -------------------------- | ----------------------------------------- | ----------------------------------------------- |
+| Check IP address           | `ip a`                                    | Correct Kali Linux IP address displayed         |
+| Test gateway               | `ping -c 4 10.0.0.1`                      | Successful replies from the gateway             |
+| Test Internet connectivity | `ping -c 4 8.8.8.8`                       | Successful replies from the external IP address |
+| Verify snapshot            | Restore the clean snapshot and run `ip a` | Baseline configuration restored                 |
 
-The Kali Linux system information was inspected to confirm that the guest operating system was running.
+### Example Results
 
-![Kali Linux System Information](screenshots/03-system-information.png)
+The following values represent the intended lab network configuration. Confirm them against the actual command output before treating them as verified results.
 
-### 2. Network Configuration
+```text
+IP Address:
+10.0.0.2/24
 
-The graphical network settings were inspected to review the active network connection.
+Gateway:
+10.0.0.1
 
-![Kali Linux Network Configuration](screenshots/04-network-configuration.png)
-
-### 3. Network Connectivity
-
-The following command was used to test connectivity to Google's domain:
-
-```bash
-ping google.com
+DNS:
+8.8.8.8
 ```
-
-This test sends four ICMP echo requests and displays the responses, if available. Resolving `google.com` to an IP address also exercises hostname resolution as part of the test.
-
-A successful ping does not guarantee that every internet service is reachable, and a failed ping does not necessarily indicate a DNS failure because ICMP traffic may be filtered.
-
-![Kali Linux Connectivity Test](screenshots/06-connectivity-test.png)
-
-### 4. Web Browser Verification
-
-Mozilla Firefox was opened in Kali Linux, and Google was accessed to check browser-based connectivity.
-
-Together, the ping test and browser check provide basic evidence of network functionality.
 
 ## 🐞 Problems Encountered & Solutions
 
@@ -216,14 +207,7 @@ Through this project, I developed practical familiarity with:
 
 ## 🔐 Security & Ethical Use
 
-This lab is intended for educational purposes and authorized security testing.
-
-- Perform security testing only on systems you own or have explicit permission to assess.
-- Use isolated lab environments when conducting potentially disruptive exercises.
-- Review virtual network connectivity before introducing additional lab machines.
-- Keep a clean VM snapshot available before making significant changes.
-- Do not store passwords, private keys, personal information, or other sensitive data in the public repository.
-- Follow applicable laws, organizational policies, and responsible disclosure practices.
+This lab is intended for educational purposes and authorized security testing only.
 
 ## 🔗 Tools & Resources
 
@@ -236,18 +220,14 @@ This lab is intended for educational purposes and authorized security testing.
 ## 👤 Author
 
 **Izzath Inayathullah**
+Aspiring Cybersecurity Professional B084
 
-Cybersecurity learner building practical skills through hands-on labs, technical documentation, and security-focused portfolio projects.
-
-GitHub: [IzzathInayathullah](https://github.com/IzzathInayathullah)
+GitHub: [IzzathInayathullah](https://github.com/IzzathInayathullah)   LinkedIn: [IzzathInayathullah](https://www.linkedin.com/in/izzathinayathullah/)
 
 ## 📌 Project Information
 
 - **Project:** Cybersecurity Lab Environment Setup
 - **Repository:** `NetworkWalks-Izzath-B084-WK1-PM1-CyberSecurity-Lab-Setup`
-- **Project type:** Beginner cybersecurity home lab
 - **Environment:** Windows 11, Oracle VirtualBox, and Kali Linux
-- **Focus areas:** Virtualization, network configuration, connectivity verification, and snapshot-based recovery
-- **Status:** Lab setup documentation and verification
 
 This project establishes a foundation for future cybersecurity labs, practical exercises, and GitHub portfolio development.
